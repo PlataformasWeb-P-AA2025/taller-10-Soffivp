@@ -1,0 +1,16 @@
+<h3>{{ mititulo }}</h3>
+Número de estudiantes {{ parroquias }}
+<hr>
+<br/>
+
+<ul>
+
+{% for e in parroquias %}
+
+  <li>{{e.nombre}} {{e.ubicacion}}</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>

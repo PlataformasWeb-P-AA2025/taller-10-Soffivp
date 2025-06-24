@@ -1,0 +1,29 @@
+<h2>Listado de Parroquias y Barrios</h2>
+
+<h3>Número de Parroquias {{ numero_parroquias }}</h3>
+
+{% for p in parroquias %}
+
+  {{p}}
+  <br/>
+  <b>Nombre Parroquia: {{p.nombre}}</b> Ubicacion: {{p.ubicacion}} Tipo: {{p.tipo}}
+  <br/>
+  <ul>
+  {% for b in p.barrios.all %}
+      <li>
+          Nombre Barrio {{b.nombre}} Numero Viviendas{{ b.numero_viviendas }}<br/>
+      </li>
+  {% endfor %}
+  </ul>
+  <br/>
+{% endfor %}
+
+<hr>
+
+<ul>
+
+{% for b in barrios %}
+  <li>{{ b }} </li>
+{% endfor %}
+
+</ul>
